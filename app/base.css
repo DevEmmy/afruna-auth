@@ -1,0 +1,82 @@
+@tailwind base;
+
+@layer base {
+	html {
+		font-family: var(--font-outfit);
+		font-size: 16px;
+		@apply scroll-smooth antialiased;
+	}
+}
+
+.slick-slider {
+}
+
+.slick-dots {
+	position: absolute !important;
+bottom: 3rem !important;
+right: 14rem !important;
+display: flex;
+flex-direction: row;
+align-items: end;
+justify-content: end;
+width: 58px !important;
+	ul {
+		width: 50px !important;
+		background-color: #1c393d66;
+		border-radius: 100vh;
+		margin: 0px !important;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.2rem 10px;
+		
+
+		.slick-active {
+			button {
+				&::before {
+					color: white !important;
+				}
+			}
+		}
+		li {
+			width: 10px !important;
+			border-radius: 100vh;
+			position: relative !important;
+			margin: 0px !important;
+
+			button {
+				position: relative !important;
+				width: 10px !important;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				&::before {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 10px !important;
+					opacity: 0.3;
+				}
+			}
+
+		}
+	}
+
+	
+}
+
+@media only screen and (max-width: 505px) {
+            .slick-dots {
+			position: absolute !important;
+bottom: 2.5rem !important;
+right: 50% !important;
+transform: translate(50%, 0);
+display: flex;
+flex-direction: row;
+align-items: end;
+justify-content: end;
+width: 58px !important;
+			}
+        }

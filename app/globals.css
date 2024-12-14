@@ -1,33 +1,78 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(./base.css);
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.shop-class {
+	position: relative;
+	/* display: inline-block; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.shop-class-hover {
+	cursor: pointer;
+}
+
+.menu-class {
+	display: none;
+	position: absolute;
+	background-color: white;
+	height: 520px;
+	width: 270px;
+	z-index: 1;
+	top: 100%;
+	padding-bottom: 2rem;
+	overflow: scroll;
+	/* padding: 0 2rem; */
+	border-radius: 10px;
+	transition: 100ms ease-in-out;
+}
+
+.shop-class:hover .menu-class {
+	display: block;
+	transition: 400ms ease-in-out;
+	top: 20px;
+}
+
+.arrow_up {
+	display: none;
+}
+
+.arrow_down {
+	display: block;
+}
+
+.shop-class:hover .arrow_up {
+	display: block;
+}
+
+.shop-class:hover .arrow_down {
+	display: none;
+}
+
+.paystack_btn {
+	border: none !important;
+	height: 30px;
+	background: none !important;
+	width: 100%;
+	margin: 2rem 0;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.custom-input {
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Safari compatibility */
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  
