@@ -18,9 +18,7 @@ import {
 	Messages2,
 	Profile,
 } from 'iconsax-react';
-import Slider from '@/public/icons/slider.svg';
-import Lotion from '@/public/images/lotion.png';
-import Shoe from '@/public/images/shoe.png';
+
 import LocalBeads from '@/public/icons/local_beads.svg';
 import LocalBasket from '@/public/icons/local_basket.svg';
 import LocalSlippers from '@/public/icons/local_slippers.svg';
@@ -76,32 +74,6 @@ export const bannerMenu = [
 	},
 ];
 
-export const sliderOptions = [
-	{
-		image: Slider,
-		title: 'LIVEBYCARE',
-		description: 'African Combo 5x Pillows Color',
-		discount: '30% OFF',
-	},
-	{
-		image: Shoe,
-		title: 'LIVEBYCARE',
-		description: 'African Combo 5x Pillows Color',
-		discount: '10% OFF',
-	},
-	{
-		image: Lotion,
-		title: 'LIVEBYCARE',
-		description: 'African Combo 5x Pillows Color',
-		discount: '50% OFF',
-	},
-	{
-		image: Slider,
-		title: 'LIVEBYCARE',
-		description: 'African Combo 5x Pillows Color',
-		discount: '20% OFF',
-	},
-];
 
 export const DeliverySteps = [
 	{
