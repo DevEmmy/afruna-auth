@@ -1,35 +1,25 @@
-"use client";
-
-import { useRouter, useSearchParams } from 'next/navigation';
-import React, { Suspense, useEffect } from 'react';
+"use client"
+import { useSearchParams } from 'next/navigation';
+import React, {Suspense, useEffect} from 'react'
 
 const RedirectLogicLayout = () => {
-  return (
+  return(
     <>
-      <Suspense fallback={<>Loading...</>}>
+        <Suspense fallback={<>Loading...</>}>
         <RedirectComponent />
-      </Suspense>
+        </Suspense>
     </>
-  );
-};
+  )
+}
 
-const RedirectComponent = () => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  let redirect_url = searchParams.get("redirect_url");
+const RedirectComponent = ()=>{
+    const searchParams = useSearchParams()
+    let redirect_url = searchParams.get("redirect_url");
 
-  useEffect(() => {
-    if (redirect_url) {
-      localStorage.setItem("redirect_url", redirect_url);
-    }
+    useEffect(()=>{
+        localStorage.setItem("redirect_url", redirect_url as string);
+    }, [redirect_url])
+    return  <></>
+}
 
-    // Redirect to /sign-in if the current path is "/"
-    if (window.location.pathname === '/') {
-      router.replace('/sign-in');
-    }
-  }, [redirect_url, router]);
-
-  return <></>;
-};
-
-export default RedirectLogicLayout;
+export default RedirectLogicLayout
